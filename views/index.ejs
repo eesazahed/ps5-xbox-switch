@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PS5 or Xbox???</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://replit.com/public/js/repl-auth-v2.js"></script>
+  </head>
+  <body>
+    <h1 id="title">
+      <span style="color: #3c88fb">PS5</span>,
+      <span style="color: #107c10">Xbox</span>, or
+      <span style="color: #e60012">Switch</span>???
+    </h1>
+    <div id="counter">
+      <h2>
+        <span id="isWinning"> <%- votes.winning %> </span>
+      </h2>
+      <h3>
+        PS5:
+        <span id="option1Voters"> <%- votes.option1Voters %> </span>
+      </h3>
+      <h3>
+        Xbox:
+        <span id="option2Voters"> <%- votes.option2Voters %> </span>
+      </h3>
+      <h3>
+        Switch:
+        <span id="option3Voters"> <%- votes.option3Voters %> </span>
+      </h3>
+    </div>
+
+    <% if (loggedIn) { %>
+    <div id="vote-container">
+      <div id="vote">
+        <% if (userAlreadyVoted) { %>
+        <h3>You've already voted!</h3>
+        <% } else { %>
+        <h2>Vote:</h2>
+        <h3>PlayStation 5, Xbox Series X, or Nintendo Switch</h3>
+        <h3>You can only vote once!</h3>
+        <div id="options">
+          <div id="option1Btn">
+            <img
+              src="http://s3.amazonaws.com/gt7sp-prod/decal/52/91/08/7350531078359089152_1.png"
+              alt="PS5"
+            />
+          </div>
+          <div id="option2Btn">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Xbox_one_logo.svg/1200px-Xbox_one_logo.svg.png"
+              alt="Xbox"
+            />
+          </div>
+          <div id="option3Btn">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/871/871377.png"
+              alt="Nintendo Switch"
+            />
+          </div>
+        </div>
+        <h3 id="loading"></h3>
+        <% } %>
+      </div>
+    </div>
+    <% } else { %>
+    <div id="login">
+      <h2>Please login to vote.</h2>
+      <button onclick="LoginWithReplit();">Login</button>
+      <p id="login-description">
+        The only reason why you need to log in is to prevent people from
+        spam-clicking votes. Your user id will be encrypted in the database and
+        therefore will remain hidden to the public.
+      </p>
+    </div>
+    <% } %>
+
+    <script src="index.js"></script>
+  </body>
+</html>

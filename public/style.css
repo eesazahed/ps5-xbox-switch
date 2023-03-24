@@ -1,0 +1,107 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  text-align: center;
+  padding: none;
+  margin: none;
+  max-width: 100vw;
+  min-height: 100vh;
+  background: white;
+  color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    color: white;
+    background: #222222;
+  }
+}
+
+h2,
+h3 {
+  font-weight: 400;
+}
+
+#title {
+  font-size: 4rem;
+  margin-top: 4rem;
+}
+
+#options,
+#option1Btn,
+#option2Btn,
+#option3Btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  #options {
+    flex-direction: column;
+  }
+}
+
+#counter,
+#login {
+  margin: 3rem auto 3rem auto;
+}
+
+#vote {
+  width: 50vw;
+  margin: auto;
+  margin-bottom: 10vh;
+}
+
+#option1Btn,
+#option2Btn,
+#option3Btn {
+  margin: 1rem;
+  border-radius: 2rem;
+}
+
+#option1Btn img,
+#option2Btn img,
+#option3Btn img {
+  cursor: pointer;
+  margin: 2rem;
+  width: 150px;
+}
+
+#option1Btn img:hover,
+#option2Btn img:hover,
+#option3Btn img:hover {
+  opacity: 0.75;
+  transition: 1s;
+}
+
+button {
+  font-size: 1.1rem;
+  background-color: #0070f3;
+  border: none;
+  margin: 2rem;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover,
+button:active {
+  transition: 0.5s;
+  background: #1e90ff;
+}
+
+#login-description {
+  width: 75vw;
+  margin: auto;
+  line-height: 1.5rem;
+}
+
+footer {
+  margin-top: 5rem;
+}
