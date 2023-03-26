@@ -3,9 +3,9 @@ import Vote from "../models/Vote.js";
 const getAllVotes = async () => {
   try {
     const votes = await Vote.findAll({ raw: true });
-    const option1Voters = votes.filter((vote) => vote.option === 0).length;
-    const option2Voters = votes.filter((vote) => vote.option === 1).length;
-    const option3Voters = votes.filter((vote) => vote.option === 2).length;
+    const option1Voters = votes.filter((vote) => vote.option === 1).length;
+    const option2Voters = votes.filter((vote) => vote.option === 2).length;
+    const option3Voters = votes.filter((vote) => vote.option === 3).length;
 
     let winning = "";
 

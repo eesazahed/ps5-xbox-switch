@@ -8,7 +8,7 @@ const vote = async (userid, option) => {
     return false;
   }
 
-  if (option !== 0 && option !== 1 && option !== 2) {
+  if (option !== 1 && option !== 2 && option !== 3) {
     return false;
   }
 
